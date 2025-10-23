@@ -630,10 +630,11 @@ const MinimalResourcesPage = () => {
                           alert("Archivo subido correctamente");
                           fetchUserGuideUploads();
                         } else {
-                          alert("Error al subir el archivo");
+                          const errorData = await res.json();
+                          alert(errorData.message || "Error al subir el archivo");
                         }
                       } catch (err) {
-                        alert("Error de red al subir el archivo");
+                        alert("Error de red: " + error.message);
                         console.log("Error de red al subir el archivo:", err);
                       }
                     };
