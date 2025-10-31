@@ -631,10 +631,10 @@ const MinimalResourcesPage = () => {
                           fetchUserGuideUploads();
                         } else {
                           const errorData = await res.json();
-                          alert(errorData.message || "Error al subir el archivo");
+                          alert(errorData.message || "Error al subir el archivo. El tamaño máximo es 10MB.");
                         }
                       } catch (err) {
-                        alert("Error de red: " + error.message);
+                        alert("Error de red: " + err.message);
                         console.log("Error de red al subir el archivo:", err);
                       }
                     };
