@@ -635,7 +635,6 @@ const MinimalResourcesPage = () => {
                         }
                       } catch (err) {
                         alert("Error de red: " + err.message);
-                        console.log("Error de red al subir el archivo:", err);
                       }
                     };
 
